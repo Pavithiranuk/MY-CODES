@@ -1,0 +1,57 @@
+                                                                   PROBLEM 1                                                           
+h=int(input())
+n= []
+s= []
+for i in range(h):
+    name=input()
+    n.append(name)
+    score=float(input())
+    s.append(score)
+j=[]
+for i in s:
+    j.append(i)
+f=s.remove(min(s))
+c=min(s)
+p=[]
+for i in range(len(j)):
+    if j[i]==c:
+        p.append(i)
+    else:
+        continue
+o=[]
+for i in p:
+    o.append(n[i])
+o.sort()
+for i in o:
+    print(i)
+
+
+INPUT:
+  5
+Harry
+37.21
+Berry
+37.21
+Tina
+37.2
+Akriti
+41
+Harsh
+39
+
+OUTPUT:
+  Berry
+  Harry
+
+  
+  
+    
+    
+
+        
+    
+    
+
+
+
+        
