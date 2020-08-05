@@ -1,0 +1,21 @@
+                                                                  PROBLEM 2
+from itertools import permutations
+a,b=input(),int(input())
+c=sorted(''.join(i) for i in permutations(a,b)) 
+for i in c: 
+    print(i) 
+    
+INPUT:
+  HACK 2
+OUTPUT:
+  AC
+  AH
+  AK
+  CA
+  CH
+  CK
+  HA  
+  HC
+  HK
+  KA
+  KC
