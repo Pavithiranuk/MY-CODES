@@ -1,0 +1,27 @@
+k = ["-"]*9
+def print_xo(k):
+    for i in range(3):
+        for j in range(3):
+            print(k[3*i+j],end="")
+            if(j!=2):
+                print("|",end="")
+        print()
+        if(i!=2):
+            print("--------")
+n = 1
+flag = 0
+while(n<=9):
+    if(n%2!=0):
+        c = 'X'
+    else:
+        c = 'O'
+    s = int(input())
+    k[s-1] = c
+    print_xo(k)
+    if(k[0]==k[1]==k[2] and k[0]!='-' or k[3]==k[4]==k[5] and k[5]!='-' or k[6]==k[7]==k[8] and k[8]!='-' or k[0]==k[3]==k[6] and k[6]!='-' or k[1]==k[4]==k[7] and k[7]!='-' or k[2]==k[5]==k[8] and k[8]!='-' or k[0]==k[4]==k[8] and k[8]!='-' or k[2]==k[4]==k[6] and k[6]!='-'):
+        flag = 1
+        print("Won")
+        break
+    n+=1
+if(flag==0):
+    print("Draw")
