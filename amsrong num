@@ -1,0 +1,14 @@
+import math
+a=20
+b=1700
+for i in range(a,b+1):
+    h=i
+    p=int(math.log10(i))+1
+    h=i
+    j=0
+    while h>0:
+        s=h%10
+        j=j+s**int(p)
+        h=h//10
+    if i==j:
+        print(i)
