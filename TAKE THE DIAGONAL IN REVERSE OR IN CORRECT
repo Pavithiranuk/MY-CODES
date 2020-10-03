@@ -1,0 +1,17 @@
+a=int(input())
+d=[]
+for i in range(0,a):
+    d.append(list(map(int,input().split())))
+
+e=[]
+f=[]
+k=0
+for i in range(0,len(d[0])):
+    f.append(i)
+f.reverse()
+print(f)
+print(d)
+for i in range(0,len(d)):
+    e.append(d[i][f[i]])
+       
+print(e)
