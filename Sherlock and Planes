@@ -1,0 +1,18 @@
+n=int(input());
+x=[]
+y=[]
+z=[]
+l=[]
+for i in range(0,n):
+    for i in range(0,4):
+        l=list(map(int,input().split(" ")));
+        x.append(l[0])
+        y.append(l[1])
+        z.append(l[2])
+    if(x.count(x[0])==4 or y.count(y[0])==4 or z.count(z[0])==4):
+        print("YES");
+    else:
+        print("NO");
+    x=[];
+    y=[];
+    z=[];
