@@ -1,0 +1,22 @@
+n=int(input())
+l=[]
+t=[]
+j=[]
+b=[]
+for i in range(n):
+    p=list(map(int,input().split()))
+    l.append(p)
+k=len(l)
+for i in range(0,k):
+    t.append(i)
+for i in range(0,len(l)):
+    j.append(l[i][t[i]])
+    c=sum(j)
+for i in range(0,k):
+    t.append(i)
+t.reverse()
+for i in range(0,len(l)):
+    b.append(l[i][t[i]])
+    d=sum(b)
+sub=abs(d-c)
+print(sub)
