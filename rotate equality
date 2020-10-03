@@ -1,0 +1,11 @@
+a=input()
+b=input()
+f=0
+for i in range(len(a)):
+    c=a[len(a)-i:len(a)]+a[0:len(a)-i]
+    if c==b:
+        f=1
+if f==1:
+    print('1')
+else:
+    print('0')
