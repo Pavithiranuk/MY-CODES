@@ -1,0 +1,27 @@
+import itertools as it
+
+N = int(input())
+
+nums = list()
+
+for i in range(N):
+    nums.append(int(input()))
+
+_min = min(nums)
+
+def go(li):
+    global _min
+    if len(li)>1:
+        for i in it.combinations(li, 2):
+            temp = abs(i[0] - i[1])
+            if _min > temp:
+                _min = temp
+            k = li.copy()
+            k.remove(i[0])
+            k.remove(i[1])
+            k.append(temp)
+            go(k)
+
+go(nums)
+
+print(_min)
