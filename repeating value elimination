@@ -1,0 +1,11 @@
+a=int(input())
+l=[]
+k=[]
+for i in range(0,a):
+    l.append(int(input()))
+for i in range(0,len(l)):
+    if l.count(l[i])>1:
+        continue
+    else:
+        k.append(l[i])
+print(k)
