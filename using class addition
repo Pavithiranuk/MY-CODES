@@ -1,0 +1,7 @@
+class Cse:
+    @staticmethod
+    def add(a,b):
+        return a+b
+a,b=5,7
+p=Cse()
+print(f'{p.add(a,b)}')
